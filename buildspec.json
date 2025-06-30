@@ -33,13 +33,13 @@
     },
     "platformConfig": {
         "macos": {
-            "bundleId": "com.example.plugintemplate-for-obs"
+            "bundleId": "com.obs-screen-split-recording.plugin"
         }
     },
-    "name": "plugintemplate-for-obs",
-    "displayName": "Plugin Template for OBS",
+    "name": "obs-screen-split-recording",
+    "displayName": "Screen Split Recording Plugin for OBS",
     "version": "1.0.0",
-    "author": "Your Name Here",
-    "website": "https://example.com",
-    "email": "me@example.com"
+    "author": "WaterS-MoYu",
+    "website": "https://github.com/WaterS-MoYu",
+    "email": "tswwss@126.com"
 }
