@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>SSRPluginSettingUI</class>
+ <widget class="QDialog" name="SSRPluginSettingUI">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>822</width>
+    <height>459</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <item row="2" column="0">
+    <layout class="QHBoxLayout" name="HLayout_ScreenBlock">
+     <item>
+      <widget class="QLabel" name="label_ScreenBlock">
+       <property name="text">
+        <string>屏幕区域</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QComboBox" name="comboBox_ScreenBlock">
+       <property name="enabled">
+        <bool>true</bool>
+       </property>
+       <property name="editable">
+        <bool>false</bool>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item row="4" column="0" colspan="2">
+    <widget class="QDialogButtonBox" name="buttonBox">
+     <property name="orientation">
+      <enum>Qt::Orientation::Horizontal</enum>
+     </property>
+     <property name="standardButtons">
+      <set>QDialogButtonBox::StandardButton::Cancel|QDialogButtonBox::StandardButton::Ok</set>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="0">
+    <layout class="QHBoxLayout" name="HLayout_RecordingSource">
+     <item>
+      <widget class="QLabel" name="label_Source">
+       <property name="text">
+        <string>录制来源</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QComboBox" name="comboBox_Source"/>
+     </item>
+    </layout>
+   </item>
+   <item row="3" column="0">
+    <layout class="QHBoxLayout" name="HLayout_NameSourceFile">
+     <item>
+      <widget class="QLabel" name="label_SourceFile">
+       <property name="text">
+        <string>名称文件路径</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLineEdit" name="lineEdit"/>
+     </item>
+     <item>
+      <widget class="QPushButton" name="pushButton">
+       <property name="text">
+        <string>浏览...</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item row="1" column="0">
+    <layout class="QHBoxLayout" name="HLayout_CamID">
+     <item>
+      <widget class="QLabel" name="label_CamID">
+       <property name="text">
+        <string>相机编号</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QComboBox" name="comboBox_CamID">
+       <property name="editable">
+        <bool>true</bool>
+       </property>
+       <property name="currentIndex">
+        <number>-1</number>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>accepted()</signal>
+   <receiver>SSRPluginSettingUI</receiver>
+   <slot>accept()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>231</x>
+     <y>427</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>157</x>
+     <y>188</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>rejected()</signal>
+   <receiver>SSRPluginSettingUI</receiver>
+   <slot>reject()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>231</x>
+     <y>427</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>231</x>
+     <y>188</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>comboBox_ScreenBlock</sender>
+   <signal>currentTextChanged(QString)</signal>
+   <receiver>SSRPluginSettingUI</receiver>
+   <slot>update()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>608</x>
+     <y>267</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>410</x>
+     <y>229</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>
